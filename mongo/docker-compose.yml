@@ -1,0 +1,16 @@
+services:
+  mongo:
+    build: .
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ZQpassowrd
+      MONGO_INITDB_DATABASE: user_data
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+    container_name: mongo.local.datasource
+
+networks:
+  backend:
+    external: true

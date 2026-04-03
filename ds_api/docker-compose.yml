@@ -1,0 +1,15 @@
+services:
+  ds_api:
+    build:
+      context: .
+    container_name: api.local.datasource
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true

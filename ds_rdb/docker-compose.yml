@@ -1,0 +1,21 @@
+services:
+  datasource-rdb:
+    build:
+      context: ps_build
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_DB: domain_database
+      POSTGRES_USER: domain
+      POSTGRES_PASSWORD: domain
+    volumes:
+      - ./posgreinit:/docker-entrypoint-initdb.d
+    ports:
+      - 5435:5435
+    command: -p 5435
+    container_name: rdb.local.datasource
+    networks:
+      - datasources
+
+networks:
+  datasources:
+    driver: bridge

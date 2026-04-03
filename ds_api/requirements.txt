@@ -1,0 +1,8 @@
+fastapi==0.115.5
+uvicorn[standard]
+pandas==2.2.3
+python-jose[cryptography]==3.3.0
+requests
+PyJWT==2.8.0
+psycopg[binary,pool]==3.2.3
+pydantic==2.9.2

@@ -1,0 +1,3 @@
+# for postgres
+POSTGRES_DB=metabase
+POSTGRES_PASSWORD=password
